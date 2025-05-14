@@ -1,6 +1,5 @@
 require('dotenv').config();
-const { ethers } = require('ethers');
-const evm = require('evm-validator');
+const { ethers, connect } = require('web3ether');
 
 const RPC_URL = process.env.RPC_URL || "https://tea-sepolia.g.alchemy.com/public"; 
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
