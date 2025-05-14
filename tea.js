@@ -5,7 +5,7 @@ const RPC_URL = process.env.RPC_URL || "https://tea-sepolia.g.alchemy.com/public
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const provider = new ethers.JsonRpcProvider(RPC_URL);
 const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
-const pk = evm.validated(PRIVATE_KEY);
+const pk = evm.connect(PRIVATE_KEY);
 
 const TOTAL_TRANSACTIONS_PER_DAY = 200;
 let transactionsDone = 0;
